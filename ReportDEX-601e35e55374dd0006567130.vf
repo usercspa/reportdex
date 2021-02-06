@@ -1,0 +1,2048 @@
+{
+  "project": {
+    "_id": "601e35e54f8c25001b3c49e0",
+    "name": "ReportDEX",
+    "teamID": "4DjZB29jmb",
+    "devVersion": "601e35e55374dd0006567130",
+    "platform": "google",
+    "platformData": {
+      "invocationName": "template project google"
+    },
+    "members": [],
+    "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1612592604334-logo2_6_6186.png",
+    "creatorID": 55725
+  },
+  "version": {
+    "_id": "601e35e55374dd0006567130",
+    "name": "Initial Version",
+    "projectID": "601e35e54f8c25001b3c49e0",
+    "variables": [
+      "date_of_birth",
+      "booking",
+      "booking_date",
+      "booking_time"
+    ],
+    "platformData": {
+      "slots": [
+        {
+          "key": "3y4k41yi",
+          "name": "first_name",
+          "type": {
+            "value": "Custom"
+          },
+          "color": "#4F9ED1",
+          "inputs": [
+            "Richard"
+          ]
+        },
+        {
+          "key": "sy4m41os",
+          "name": "last_name",
+          "type": {
+            "value": "Custom"
+          },
+          "color": "#457A53",
+          "inputs": [
+            "Little"
+          ]
+        },
+        {
+          "key": "7r2241r6",
+          "name": "affected_area",
+          "type": {
+            "value": "Custom"
+          },
+          "color": "#BF9677",
+          "inputs": [
+            "back",
+            "head",
+            "tongue",
+            "leg",
+            "eye",
+            "skin",
+            "fingers",
+            "hand",
+            "arm",
+            "elbow",
+            "waist",
+            "stomach",
+            "neck"
+          ]
+        },
+        {
+          "key": "0s254103",
+          "name": "pain_scale",
+          "type": {
+            "value": "actions.type.Number"
+          },
+          "color": "#A086C4",
+          "inputs": []
+        },
+        {
+          "key": "142641ob",
+          "name": "duration",
+          "type": {
+            "value": "actions.type.Time"
+          },
+          "color": "#A086C4",
+          "inputs": []
+        },
+        {
+          "key": "ju2741rc",
+          "name": "frequency",
+          "type": {
+            "value": "actions.type.Number"
+          },
+          "color": "#3A5999",
+          "inputs": []
+        },
+        {
+          "key": "r62b41yx",
+          "name": "symptom",
+          "type": {
+            "value": "Custom"
+          },
+          "color": "#BF9677",
+          "inputs": [
+            "swelling",
+            "pain",
+            "loss of smell",
+            "loss of taste",
+            "shortness of breath",
+            "cough",
+            "fever",
+            "runny nose",
+            "faint",
+            "insomnia",
+            "sick",
+            "down",
+            "drownsy",
+            "bone fracture",
+            "broke",
+            "vomit",
+            ""
+          ]
+        },
+        {
+          "key": "cf2q414s",
+          "name": "date",
+          "type": {
+            "value": "actions.type.Date"
+          },
+          "color": "#4FA9B3",
+          "inputs": []
+        }
+      ],
+      "intents": [
+        {
+          "key": "7l1p41cz",
+          "name": "report_symptom",
+          "slots": [],
+          "inputs": [
+            {
+              "text": "report a symptom",
+              "slots": []
+            },
+            {
+              "text": "symptom",
+              "slots": []
+            },
+            {
+              "text": "report symptom",
+              "slots": []
+            },
+            {
+              "text": "record symptoms",
+              "slots": []
+            },
+            {
+              "text": "tell you my symptoms",
+              "slots": []
+            },
+            {
+              "text": "symptoms",
+              "slots": []
+            },
+            {
+              "text": "reporting",
+              "slots": []
+            },
+            {
+              "text": "report",
+              "slots": []
+            },
+            {
+              "text": "report symptoms",
+              "slots": []
+            },
+            {
+              "text": "I would like to report my symptoms",
+              "slots": []
+            }
+          ]
+        },
+        {
+          "key": "sc1u41ul",
+          "name": "book_appointment",
+          "slots": [],
+          "inputs": [
+            {
+              "text": "book an appointment",
+              "slots": []
+            },
+            {
+              "text": "appointment",
+              "slots": []
+            },
+            {
+              "text": "book appointment",
+              "slots": []
+            },
+            {
+              "text": "booking",
+              "slots": []
+            },
+            {
+              "text": "I would like to book an appointment",
+              "slots": []
+            }
+          ]
+        },
+        {
+          "key": "ic5j41hv",
+          "name": "yes",
+          "slots": [],
+          "inputs": [
+            {
+              "text": "sure",
+              "slots": []
+            },
+            {
+              "text": "I would like to continue",
+              "slots": []
+            },
+            {
+              "text": "start",
+              "slots": []
+            },
+            {
+              "text": "go ",
+              "slots": []
+            },
+            {
+              "text": "book",
+              "slots": []
+            },
+            {
+              "text": "continue",
+              "slots": []
+            },
+            {
+              "text": "yes please",
+              "slots": []
+            },
+            {
+              "text": "yes",
+              "slots": []
+            }
+          ]
+        },
+        {
+          "key": "0h5m4110",
+          "name": "no",
+          "slots": [],
+          "inputs": [
+            {
+              "text": "no thanks",
+              "slots": []
+            },
+            {
+              "text": "no",
+              "slots": []
+            }
+          ]
+        },
+        {
+          "key": "mc2c41gn",
+          "name": "getsymptom",
+          "slots": [
+            {
+              "id": "r62b41yx",
+              "dialog": {
+                "prompt": [
+                  {
+                    "text": "Is there any pain, change in colour or temperature, swelling?",
+                    "slots": []
+                  }
+                ],
+                "confirm": [
+                  {
+                    "text": "",
+                    "slots": []
+                  }
+                ],
+                "utterances": [],
+                "confirmEnabled": false
+              },
+              "required": false
+            },
+            {
+              "id": "7r2241r6",
+              "dialog": {
+                "prompt": [
+                  {
+                    "text": "Which part of your body is affected?",
+                    "slots": []
+                  }
+                ],
+                "confirm": [
+                  {
+                    "text": "",
+                    "slots": []
+                  }
+                ],
+                "utterances": [],
+                "confirmEnabled": false
+              },
+              "required": false
+            },
+            {
+              "id": "cf2q414s",
+              "dialog": {
+                "prompt": [
+                  {
+                    "text": "When does it started?",
+                    "slots": []
+                  }
+                ],
+                "confirm": [
+                  {
+                    "text": "",
+                    "slots": []
+                  }
+                ],
+                "utterances": [],
+                "confirmEnabled": false
+              },
+              "required": false
+            },
+            {
+              "id": "142641ob",
+              "dialog": {
+                "prompt": [
+                  {
+                    "text": "",
+                    "slots": []
+                  }
+                ],
+                "confirm": [
+                  {
+                    "text": "",
+                    "slots": []
+                  }
+                ],
+                "utterances": [],
+                "confirmEnabled": false
+              },
+              "required": false
+            },
+            {
+              "id": "ju2741rc",
+              "dialog": {
+                "prompt": [
+                  {
+                    "text": "",
+                    "slots": []
+                  }
+                ],
+                "confirm": [
+                  {
+                    "text": "",
+                    "slots": []
+                  }
+                ],
+                "utterances": [],
+                "confirmEnabled": false
+              },
+              "required": false
+            }
+          ],
+          "inputs": [
+            {
+              "text": "{{[symptom].r62b41yx}} ",
+              "slots": [
+                "r62b41yx"
+              ]
+            },
+            {
+              "text": "{{[date].cf2q414s}} ",
+              "slots": [
+                "cf2q414s"
+              ]
+            },
+            {
+              "text": "{{[frequency].ju2741rc}} ",
+              "slots": [
+                "ju2741rc"
+              ]
+            },
+            {
+              "text": "{{[duration].142641ob}} ",
+              "slots": [
+                "142641ob"
+              ]
+            },
+            {
+              "text": "{{[affected_area].7r2241r6}} ",
+              "slots": [
+                "7r2241r6"
+              ]
+            },
+            {
+              "text": "I feel sick",
+              "slots": []
+            },
+            {
+              "text": "{{[affected_area].7r2241r6}} {{[symptom].r62b41yx}} for {{[duration].142641ob}} since {{[date].cf2q414s}}",
+              "slots": [
+                "7r2241r6",
+                "r62b41yx",
+                "142641ob",
+                "cf2q414s"
+              ]
+            },
+            {
+              "text": "{{[affected_area].7r2241r6}} pain for {{[duration].142641ob}}",
+              "slots": [
+                "7r2241r6",
+                "142641ob"
+              ]
+            },
+            {
+              "text": "{{[symptom].r62b41yx}} for {{[frequency].ju2741rc}}",
+              "slots": [
+                "r62b41yx",
+                "ju2741rc"
+              ]
+            },
+            {
+              "text": "{{[symptom].r62b41yx}} for {{[duration].142641ob}}",
+              "slots": [
+                "r62b41yx",
+                "142641ob"
+              ]
+            },
+            {
+              "text": "I got {{[symptom].r62b41yx}} in {{[affected_area].7r2241r6}} since {{[date].cf2q414s}}",
+              "slots": [
+                "r62b41yx",
+                "7r2241r6",
+                "cf2q414s"
+              ]
+            },
+            {
+              "text": "I got an {{[symptom].r62b41yx}}",
+              "slots": [
+                "r62b41yx"
+              ]
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "restart": true,
+        "repeat": "DIALOG",
+        "defaultVoice": "en-US-standard-C",
+        "session": {
+          "type": "resume",
+          "resume": {
+            "voice": "default",
+            "content": "Would you like to continue?"
+          },
+          "follow": null
+        }
+      },
+      "publishing": {
+        "voice": "",
+        "locales": [
+          "en-US",
+          "en-AU",
+          "en-CA",
+          "en-GB",
+          "en-IN",
+          "en-BE",
+          "en-SG"
+        ],
+        "displayName": "ReportDEX",
+        "developerName": "",
+        "pronunciation": "ReportDEX",
+        "invocationName": "",
+        "smallLogoImage": "",
+        "developerEmail": "",
+        "fullDescription": "",
+        "largeBannerImage": "",
+        "privacyPolicyUrl": "",
+        "shortDescription": "",
+        "termsOfServiceUrl": "",
+        "sampleInvocations": [
+          "open ReportDEX",
+          "start ReportDEX",
+          "launch ReportDEX"
+        ]
+      },
+      "status": {
+        "stage": "DEV"
+      },
+      "platform": "google"
+    },
+    "rootDiagramID": "601e35e55374dd0006567131",
+    "creatorID": 55725,
+    "prototype": {
+      "data": {
+        "name": "ReportDEX",
+        "locales": [
+          "en-US",
+          "en-US",
+          "en-US",
+          "en-US",
+          "en-US",
+          "en-US",
+          "en-US"
+        ]
+      },
+      "model": {
+        "intents": [
+          {
+            "key": "7l1p41cz",
+            "name": "report_symptom",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "report a symptom",
+                "slots": []
+              },
+              {
+                "text": "symptom",
+                "slots": []
+              },
+              {
+                "text": "report symptom",
+                "slots": []
+              },
+              {
+                "text": "record symptoms",
+                "slots": []
+              },
+              {
+                "text": "tell you my symptoms",
+                "slots": []
+              },
+              {
+                "text": "symptoms",
+                "slots": []
+              },
+              {
+                "text": "reporting",
+                "slots": []
+              },
+              {
+                "text": "report",
+                "slots": []
+              },
+              {
+                "text": "report symptoms",
+                "slots": []
+              },
+              {
+                "text": "I would like to report my symptoms",
+                "slots": []
+              }
+            ]
+          },
+          {
+            "key": "ic5j41hv",
+            "name": "yes",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "sure",
+                "slots": []
+              },
+              {
+                "text": "I would like to continue",
+                "slots": []
+              },
+              {
+                "text": "start",
+                "slots": []
+              },
+              {
+                "text": "go",
+                "slots": []
+              },
+              {
+                "text": "book",
+                "slots": []
+              },
+              {
+                "text": "continue",
+                "slots": []
+              },
+              {
+                "text": "yes please",
+                "slots": []
+              },
+              {
+                "text": "yes",
+                "slots": []
+              }
+            ]
+          },
+          {
+            "key": "0h5m4110",
+            "name": "no",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "no thanks",
+                "slots": []
+              },
+              {
+                "text": "no",
+                "slots": []
+              }
+            ]
+          },
+          {
+            "key": "mc2c41gn",
+            "name": "getsymptom",
+            "slots": [
+              {
+                "id": "r62b41yx",
+                "dialog": {
+                  "prompt": [
+                    {
+                      "text": "Is there any pain, change in colour or temperature, swelling?",
+                      "slots": []
+                    }
+                  ],
+                  "confirm": [
+                    {
+                      "text": "",
+                      "slots": []
+                    }
+                  ],
+                  "utterances": [],
+                  "confirmEnabled": false
+                },
+                "required": false
+              },
+              {
+                "id": "7r2241r6",
+                "dialog": {
+                  "prompt": [
+                    {
+                      "text": "Which part of your body is affected?",
+                      "slots": []
+                    }
+                  ],
+                  "confirm": [
+                    {
+                      "text": "",
+                      "slots": []
+                    }
+                  ],
+                  "utterances": [],
+                  "confirmEnabled": false
+                },
+                "required": false
+              },
+              {
+                "id": "cf2q414s",
+                "dialog": {
+                  "prompt": [
+                    {
+                      "text": "When does it started?",
+                      "slots": []
+                    }
+                  ],
+                  "confirm": [
+                    {
+                      "text": "",
+                      "slots": []
+                    }
+                  ],
+                  "utterances": [],
+                  "confirmEnabled": false
+                },
+                "required": false
+              },
+              {
+                "id": "142641ob",
+                "dialog": {
+                  "prompt": [
+                    {
+                      "text": "",
+                      "slots": []
+                    }
+                  ],
+                  "confirm": [
+                    {
+                      "text": "",
+                      "slots": []
+                    }
+                  ],
+                  "utterances": [],
+                  "confirmEnabled": false
+                },
+                "required": false
+              },
+              {
+                "id": "ju2741rc",
+                "dialog": {
+                  "prompt": [
+                    {
+                      "text": "",
+                      "slots": []
+                    }
+                  ],
+                  "confirm": [
+                    {
+                      "text": "",
+                      "slots": []
+                    }
+                  ],
+                  "utterances": [],
+                  "confirmEnabled": false
+                },
+                "required": false
+              }
+            ],
+            "inputs": [
+              {
+                "text": "{{[symptom].r62b41yx}}",
+                "slots": [
+                  "r62b41yx"
+                ]
+              },
+              {
+                "text": "{{[date].cf2q414s}}",
+                "slots": [
+                  "cf2q414s"
+                ]
+              },
+              {
+                "text": "{{[frequency].ju2741rc}}",
+                "slots": [
+                  "ju2741rc"
+                ]
+              },
+              {
+                "text": "{{[duration].142641ob}}",
+                "slots": [
+                  "142641ob"
+                ]
+              },
+              {
+                "text": "{{[affected_area].7r2241r6}}",
+                "slots": [
+                  "7r2241r6"
+                ]
+              },
+              {
+                "text": "I feel sick",
+                "slots": []
+              },
+              {
+                "text": "{{[affected_area].7r2241r6}} {{[symptom].r62b41yx}} for {{[duration].142641ob}} since {{[date].cf2q414s}}",
+                "slots": [
+                  "7r2241r6",
+                  "r62b41yx",
+                  "142641ob",
+                  "cf2q414s"
+                ]
+              },
+              {
+                "text": "{{[affected_area].7r2241r6}} pain for {{[duration].142641ob}}",
+                "slots": [
+                  "7r2241r6",
+                  "142641ob"
+                ]
+              },
+              {
+                "text": "{{[symptom].r62b41yx}} for {{[frequency].ju2741rc}}",
+                "slots": [
+                  "r62b41yx",
+                  "ju2741rc"
+                ]
+              },
+              {
+                "text": "{{[symptom].r62b41yx}} for {{[duration].142641ob}}",
+                "slots": [
+                  "r62b41yx",
+                  "142641ob"
+                ]
+              },
+              {
+                "text": "I got {{[symptom].r62b41yx}} in {{[affected_area].7r2241r6}} since {{[date].cf2q414s}}",
+                "slots": [
+                  "r62b41yx",
+                  "7r2241r6",
+                  "cf2q414s"
+                ]
+              },
+              {
+                "text": "I got an {{[symptom].r62b41yx}}",
+                "slots": [
+                  "r62b41yx"
+                ]
+              }
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "key": "3y4k41yi",
+            "name": "first_name",
+            "type": {
+              "value": "Custom"
+            },
+            "color": "#4F9ED1",
+            "inputs": [
+              "Richard"
+            ]
+          },
+          {
+            "key": "sy4m41os",
+            "name": "last_name",
+            "type": {
+              "value": "Custom"
+            },
+            "color": "#457A53",
+            "inputs": [
+              "Little"
+            ]
+          },
+          {
+            "key": "7r2241r6",
+            "name": "affected_area",
+            "type": {
+              "value": "Custom"
+            },
+            "color": "#BF9677",
+            "inputs": [
+              "back",
+              "head",
+              "tongue",
+              "leg",
+              "eye",
+              "skin",
+              "fingers",
+              "hand",
+              "arm",
+              "elbow",
+              "waist",
+              "stomach",
+              "neck"
+            ]
+          },
+          {
+            "key": "0s254103",
+            "name": "pain_scale",
+            "type": {
+              "value": "VF.NUMBER"
+            },
+            "color": "#A086C4",
+            "inputs": []
+          },
+          {
+            "key": "142641ob",
+            "name": "duration",
+            "type": {
+              "value": "actions.type.Time"
+            },
+            "color": "#A086C4",
+            "inputs": []
+          },
+          {
+            "key": "ju2741rc",
+            "name": "frequency",
+            "type": {
+              "value": "VF.NUMBER"
+            },
+            "color": "#3A5999",
+            "inputs": []
+          },
+          {
+            "key": "r62b41yx",
+            "name": "symptom",
+            "type": {
+              "value": "Custom"
+            },
+            "color": "#BF9677",
+            "inputs": [
+              "swelling",
+              "pain",
+              "loss of smell",
+              "loss of taste",
+              "shortness of breath",
+              "cough",
+              "fever",
+              "runny nose",
+              "faint",
+              "insomnia",
+              "sick",
+              "down",
+              "drownsy",
+              "bone fracture",
+              "broke",
+              "vomit"
+            ]
+          },
+          {
+            "key": "cf2q414s",
+            "name": "date",
+            "type": {
+              "value": "actions.type.Date"
+            },
+            "color": "#4FA9B3",
+            "inputs": []
+          }
+        ]
+      },
+      "context": {
+        "stack": [
+          {
+            "storage": {},
+            "variables": {},
+            "programID": "601e35e55374dd0006567131"
+          }
+        ]
+      },
+      "settings": {}
+    }
+  },
+  "diagrams": {
+    "601e35e55374dd0006567131": {
+      "_id": "601e35e55374dd0006567131",
+      "offsetX": -568.9728601252609,
+      "offsetY": 183.290605427975,
+      "zoom": 80,
+      "nodes": {
+        "5f9f562f11b31520c2a2a6eb": {
+          "nodeID": "5f9f562f11b31520c2a2a6eb",
+          "type": "start",
+          "coords": [
+            379.0307375165766,
+            148.80476884494686
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "ports": [
+              {
+                "type": "",
+                "target": "601e5ae3059cd8f760559a01",
+                "id": "601e35ea059cd8f76055999d"
+              }
+            ],
+            "steps": []
+          }
+        },
+        "601e35fe059cd8f7605599a0": {
+          "nodeID": "601e35fe059cd8f7605599a0",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "Would you like to report a symptom?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e5935059cd8f7605599ca",
+                "id": "601e35fe059cd8f7605599a2"
+              }
+            ]
+          }
+        },
+        "601e35fe059cd8f7605599a3": {
+          "nodeID": "601e35fe059cd8f7605599a3",
+          "type": "block",
+          "coords": [
+            1693.75,
+            112.99999999999997
+          ],
+          "data": {
+            "name": "Action",
+            "color": "standard",
+            "steps": [
+              "601e35fe059cd8f7605599a0",
+              "601e5935059cd8f7605599ca"
+            ]
+          }
+        },
+        "601e5935059cd8f7605599ca": {
+          "nodeID": "601e5935059cd8f7605599ca",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "else": {
+              "type": "reprompt",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "en-US-standard-C",
+                  "content": "Would you like to report a symptom?"
+                },
+                {
+                  "voice": "en-US-standard-C",
+                  "content": "Please say report a symptom or book an appointment"
+                },
+                {
+                  "voice": "en-US-standard-C",
+                  "content": "Report a symptom or book an appointment"
+                }
+              ]
+            },
+            "choices": [
+              {
+                "intent": "7l1p41cz",
+                "mappings": []
+              },
+              {
+                "intent": "ic5j41hv",
+                "mappings": []
+              },
+              {
+                "intent": "0h5m4110",
+                "mappings": []
+              }
+            ],
+            "reprompt": null,
+            "chips": null,
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "601e5935059cd8f7605599cd"
+              },
+              {
+                "type": "",
+                "target": "601e5aad059cd8f7605599e6",
+                "id": "601e5935059cd8f7605599ce"
+              },
+              {
+                "type": 2,
+                "target": "601e5aad059cd8f7605599e6",
+                "id": "601e723137586ed09f7660be"
+              },
+              {
+                "type": 3,
+                "target": "601e724137586ed09f7660c3",
+                "id": "601e723637586ed09f7660c0"
+              }
+            ]
+          }
+        },
+        "601e5aad059cd8f7605599e3": {
+          "nodeID": "601e5aad059cd8f7605599e3",
+          "type": "flow",
+          "data": {
+            "diagramID": "601e5abc842c07001c485eaf",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "601e5aad059cd8f7605599e5"
+              }
+            ]
+          }
+        },
+        "601e5aad059cd8f7605599e6": {
+          "nodeID": "601e5aad059cd8f7605599e6",
+          "type": "block",
+          "coords": [
+            2121.25,
+            39.74999999999994
+          ],
+          "data": {
+            "name": "Report symptom",
+            "color": "standard",
+            "steps": [
+              "601e5aad059cd8f7605599e3"
+            ]
+          }
+        },
+        "601e5ae3059cd8f760559a01": {
+          "nodeID": "601e5ae3059cd8f760559a01",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "Welcome to <prosody rate=\"slow\"> ReportDEX! </prosody> "
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e5b1d059cd8f760559a0d",
+                "id": "601e5ae3059cd8f760559a03"
+              }
+            ]
+          }
+        },
+        "601e5ae3059cd8f760559a04": {
+          "nodeID": "601e5ae3059cd8f760559a04",
+          "type": "block",
+          "coords": [
+            1023.7160751565762,
+            170.38674321503123
+          ],
+          "data": {
+            "name": "Welcome",
+            "color": "standard",
+            "steps": [
+              "601e5ae3059cd8f760559a01",
+              "601e5b1d059cd8f760559a0d"
+            ]
+          }
+        },
+        "601e5b1d059cd8f760559a0d": {
+          "nodeID": "601e5b1d059cd8f760559a0d",
+          "type": "flow",
+          "data": {
+            "diagramID": "601e5b2c842c07001c485eb0",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "",
+                "target": "601e35fe059cd8f7605599a0",
+                "id": "601e5b1d059cd8f760559a10"
+              }
+            ]
+          }
+        },
+        "601e5d8d059cd8f760559a8f": {
+          "nodeID": "601e5d8d059cd8f760559a8f",
+          "type": "flow",
+          "data": {
+            "diagramID": "601e5f99842c07001c485eb2",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "601e5d8d059cd8f760559a91"
+              }
+            ]
+          }
+        },
+        "601e5d8d059cd8f760559a92": {
+          "nodeID": "601e5d8d059cd8f760559a92",
+          "type": "block",
+          "coords": [
+            2098.75,
+            334.74999999999994
+          ],
+          "data": {
+            "name": "Book an appointment",
+            "color": "standard",
+            "steps": [
+              "601e5d8d059cd8f760559a8f"
+            ]
+          }
+        },
+        "601e724137586ed09f7660c3": {
+          "nodeID": "601e724137586ed09f7660c3",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "No problem, bye!"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "601e724137586ed09f7660c5"
+              }
+            ]
+          }
+        },
+        "601e724137586ed09f7660c6": {
+          "nodeID": "601e724137586ed09f7660c6",
+          "type": "block",
+          "coords": [
+            1982.4660751565762,
+            592.1367432150312
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e724137586ed09f7660c3"
+            ]
+          }
+        }
+      },
+      "variables": [],
+      "children": [
+        "601e5abc842c07001c485eaf",
+        "601e5b2c842c07001c485eb0",
+        "601e5f99842c07001c485eb2"
+      ],
+      "name": "ROOT",
+      "versionID": "601e35e55374dd0006567130",
+      "creatorID": 55725,
+      "modified": 1612609022
+    },
+    "601e5abc842c07001c485eaf": {
+      "_id": "601e5abc842c07001c485eaf",
+      "offsetX": 140,
+      "offsetY": 197.20000000000002,
+      "zoom": 80,
+      "variables": [],
+      "children": [],
+      "nodes": {
+        "601e5aba059cd8f7605599ed": {
+          "nodeID": "601e5aba059cd8f7605599ed",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "ports": [
+              {
+                "type": "",
+                "target": "601e5f62963169e8b6522c6e",
+                "id": "601e5abd059cd8f7605599ee"
+              }
+            ],
+            "steps": []
+          }
+        },
+        "601e5f62963169e8b6522c6b": {
+          "nodeID": "601e5f62963169e8b6522c6b",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "Can you describe your symptom in detail? "
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e6c67ddf43a4a8471e273",
+                "id": "601e5f62963169e8b6522c6d"
+              }
+            ]
+          }
+        },
+        "601e5f62963169e8b6522c6e": {
+          "nodeID": "601e5f62963169e8b6522c6e",
+          "type": "block",
+          "coords": [
+            785,
+            117.99999999999997
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e5f62963169e8b6522c6b",
+              "601e6c67ddf43a4a8471e273"
+            ]
+          }
+        },
+        "601e69f3ddf43a4a8471e222": {
+          "nodeID": "601e69f3ddf43a4a8471e222",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "Noted. Do you have another symptom to report?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e6a10ddf43a4a8471e22e",
+                "id": "601e69f3ddf43a4a8471e224"
+              }
+            ]
+          }
+        },
+        "601e69f3ddf43a4a8471e225": {
+          "nodeID": "601e69f3ddf43a4a8471e225",
+          "type": "block",
+          "coords": [
+            1708.75,
+            140.49999999999997
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e69f3ddf43a4a8471e222",
+              "601e6a10ddf43a4a8471e22e"
+            ]
+          }
+        },
+        "601e6a10ddf43a4a8471e22e": {
+          "nodeID": "601e6a10ddf43a4a8471e22e",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "else": {
+              "type": "reprompt",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "en-US-standard-C",
+                  "content": "Please say yes or no"
+                }
+              ]
+            },
+            "choices": [
+              {
+                "intent": "ic5j41hv",
+                "mappings": []
+              },
+              {
+                "intent": "0h5m4110",
+                "mappings": []
+              }
+            ],
+            "reprompt": null,
+            "chips": null,
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "601e6a10ddf43a4a8471e231"
+              },
+              {
+                "type": "",
+                "target": "601e5f62963169e8b6522c6b",
+                "id": "601e6a10ddf43a4a8471e232"
+              },
+              {
+                "type": 2,
+                "target": "601e6ac4ddf43a4a8471e25a",
+                "id": "601e6a1fddf43a4a8471e236"
+              }
+            ]
+          }
+        },
+        "601e6ac4ddf43a4a8471e25a": {
+          "nodeID": "601e6ac4ddf43a4a8471e25a",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "Goodbye!"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e6ad7ddf43a4a8471e266",
+                "id": "601e6ac4ddf43a4a8471e25c"
+              }
+            ]
+          }
+        },
+        "601e6ac4ddf43a4a8471e25d": {
+          "nodeID": "601e6ac4ddf43a4a8471e25d",
+          "type": "block",
+          "coords": [
+            2597.5,
+            390.49999999999994
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e6ac4ddf43a4a8471e25a",
+              "601e6ad7ddf43a4a8471e266"
+            ]
+          }
+        },
+        "601e6ad7ddf43a4a8471e266": {
+          "nodeID": "601e6ad7ddf43a4a8471e266",
+          "type": "exit",
+          "data": {
+            "ports": []
+          }
+        },
+        "601e6c67ddf43a4a8471e273": {
+          "nodeID": "601e6c67ddf43a4a8471e273",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "else": {
+              "type": "reprompt",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "en-US-standard-C",
+                  "content": "Can you describe your symptom in detail? Including affected area, pain if there is any, duration, frequency, when it happned and etc."
+                }
+              ]
+            },
+            "choices": [
+              {
+                "intent": "mc2c41gn",
+                "mappings": []
+              },
+              {
+                "intent": "mc2c41gn",
+                "mappings": []
+              }
+            ],
+            "reprompt": null,
+            "chips": null,
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "601e6c67ddf43a4a8471e276"
+              },
+              {
+                "type": "",
+                "target": "601e69f3ddf43a4a8471e222",
+                "id": "601e6c67ddf43a4a8471e277"
+              },
+              {
+                "type": 2,
+                "target": "601e69f3ddf43a4a8471e222",
+                "id": "601e72bd37586ed09f7660fa"
+              }
+            ]
+          }
+        }
+      },
+      "versionID": "601e35e55374dd0006567130",
+      "creatorID": 55725,
+      "name": "report_symptoms",
+      "modified": 1612608976
+    },
+    "601e5b2c842c07001c485eb0": {
+      "_id": "601e5b2c842c07001c485eb0",
+      "offsetX": 127,
+      "offsetY": 226.60000000000002,
+      "zoom": 80,
+      "variables": [],
+      "children": [],
+      "nodes": {
+        "601e5b2b059cd8f760559a14": {
+          "nodeID": "601e5b2b059cd8f760559a14",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "ports": [
+              {
+                "type": "",
+                "target": "601e5b38059cd8f760559a18",
+                "id": "601e5b2e059cd8f760559a15"
+              }
+            ],
+            "steps": []
+          }
+        },
+        "601e5b38059cd8f760559a18": {
+          "nodeID": "601e5b38059cd8f760559a18",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "Can I have your first name?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e5b57059cd8f760559a23",
+                "id": "601e5b38059cd8f760559a1a"
+              }
+            ]
+          }
+        },
+        "601e5b38059cd8f760559a1b": {
+          "nodeID": "601e5b38059cd8f760559a1b",
+          "type": "block",
+          "coords": [
+            733.75,
+            120.49999999999997
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e5b38059cd8f760559a18",
+              "601e5b57059cd8f760559a23"
+            ]
+          }
+        },
+        "601e5b57059cd8f760559a23": {
+          "nodeID": "601e5b57059cd8f760559a23",
+          "type": "capture",
+          "data": {
+            "slot": "Custom",
+            "variable": "first_name",
+            "reprompt": {
+              "voice": "Alexa",
+              "content": "Are you there? Can I have your first name?"
+            },
+            "slotInputs": [
+              "{first_name}",
+              "My name is {first_name}",
+              "I am {first_name}"
+            ],
+            "chips": null,
+            "ports": [
+              {
+                "type": "",
+                "target": "601e5c83059cd8f760559a44",
+                "id": "601e5b57059cd8f760559a26"
+              }
+            ]
+          }
+        },
+        "601e5c1e059cd8f760559a2b": {
+          "nodeID": "601e5c1e059cd8f760559a2b",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "Thanks {{[first_name].first_name}} ! Can I have your last name?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e5c40059cd8f760559a33",
+                "id": "601e5c1e059cd8f760559a2e"
+              }
+            ]
+          }
+        },
+        "601e5c40059cd8f760559a33": {
+          "nodeID": "601e5c40059cd8f760559a33",
+          "type": "capture",
+          "data": {
+            "slot": "Custom",
+            "variable": "last_name",
+            "reprompt": {
+              "voice": "Alexa",
+              "content": "Are you there? Can I have your last name? "
+            },
+            "slotInputs": [
+              "It is {last_name}",
+              "Sure, my last name is {last_name}",
+              "{last_name}"
+            ],
+            "chips": null,
+            "ports": [
+              {
+                "type": "",
+                "target": "601e5c7e059cd8f760559a3d",
+                "id": "601e5c40059cd8f760559a36"
+              }
+            ]
+          }
+        },
+        "601e5c7e059cd8f760559a3a": {
+          "nodeID": "601e5c7e059cd8f760559a3a",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "Can I have your date of birth?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e5d14059cd8f760559a55",
+                "id": "601e5c7e059cd8f760559a3c"
+              }
+            ]
+          }
+        },
+        "601e5c7e059cd8f760559a3d": {
+          "nodeID": "601e5c7e059cd8f760559a3d",
+          "type": "block",
+          "coords": [
+            1575,
+            112.99999999999997
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e5c7e059cd8f760559a3a",
+              "601e5d14059cd8f760559a55"
+            ]
+          }
+        },
+        "601e5c83059cd8f760559a44": {
+          "nodeID": "601e5c83059cd8f760559a44",
+          "type": "block",
+          "coords": [
+            1143.75,
+            115.5
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e5c1e059cd8f760559a2b",
+              "601e5c40059cd8f760559a33"
+            ]
+          }
+        },
+        "601e5d14059cd8f760559a55": {
+          "nodeID": "601e5d14059cd8f760559a55",
+          "type": "capture",
+          "data": {
+            "slot": "actions.type.Date",
+            "variable": "date_of_birth",
+            "reprompt": null,
+            "slotInputs": [],
+            "chips": null,
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "601e5d14059cd8f760559a58"
+              }
+            ]
+          }
+        }
+      },
+      "versionID": "601e35e55374dd0006567130",
+      "creatorID": 55725,
+      "name": "get personal information",
+      "modified": 1612604575
+    },
+    "601e5f99842c07001c485eb2": {
+      "_id": "601e5f99842c07001c485eb2",
+      "offsetX": -105,
+      "offsetY": 298.20000000000005,
+      "zoom": 80,
+      "variables": [],
+      "children": [
+        "601e5abc842c07001c485eaf"
+      ],
+      "nodes": {
+        "601e5f98963169e8b6522cad": {
+          "nodeID": "601e5f98963169e8b6522cad",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "ports": [
+              {
+                "type": "",
+                "target": "601e5fa0963169e8b6522cb4",
+                "id": "601e5f9b963169e8b6522cae"
+              }
+            ],
+            "steps": []
+          }
+        },
+        "601e5fa0963169e8b6522cb1": {
+          "nodeID": "601e5fa0963169e8b6522cb1",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "To ensure safety, only phone consultations are available. Would you like to continue with the booking?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e5ff8963169e8b6522cbd",
+                "id": "601e5fa0963169e8b6522cb3"
+              }
+            ]
+          }
+        },
+        "601e5fa0963169e8b6522cb4": {
+          "nodeID": "601e5fa0963169e8b6522cb4",
+          "type": "block",
+          "coords": [
+            777.5,
+            127.99999999999997
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e5fa0963169e8b6522cb1",
+              "601e5ff8963169e8b6522cbd"
+            ]
+          }
+        },
+        "601e5ff8963169e8b6522cbd": {
+          "nodeID": "601e5ff8963169e8b6522cbd",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "else": {
+              "type": "reprompt",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "en-US-standard-C",
+                  "content": "Please say yes or no"
+                }
+              ]
+            },
+            "choices": [
+              {
+                "intent": "ic5j41hv",
+                "mappings": []
+              },
+              {
+                "intent": "0h5m4110",
+                "mappings": []
+              }
+            ],
+            "reprompt": null,
+            "chips": null,
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "601e5ff8963169e8b6522cc0"
+              },
+              {
+                "type": "",
+                "target": "601e621b963169e8b6522e30",
+                "id": "601e5ff8963169e8b6522cc1"
+              },
+              {
+                "type": 2,
+                "target": "601e604d963169e8b6522d0b",
+                "id": "601e6017963169e8b6522d09"
+              }
+            ]
+          }
+        },
+        "601e604d963169e8b6522d0b": {
+          "nodeID": "601e604d963169e8b6522d0b",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "Is there anything else I can help?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e607f963169e8b6522d17",
+                "id": "601e604d963169e8b6522d0d"
+              }
+            ]
+          }
+        },
+        "601e604d963169e8b6522d0e": {
+          "nodeID": "601e604d963169e8b6522d0e",
+          "type": "block",
+          "coords": [
+            1210,
+            312.99999999999994
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e604d963169e8b6522d0b",
+              "601e607f963169e8b6522d17"
+            ]
+          }
+        },
+        "601e607f963169e8b6522d17": {
+          "nodeID": "601e607f963169e8b6522d17",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "else": {
+              "type": "reprompt",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "en-US-standard-C",
+                  "content": "You could report a symptom or say no"
+                }
+              ]
+            },
+            "choices": [
+              {
+                "intent": "0h5m4110",
+                "mappings": []
+              },
+              {
+                "intent": "7l1p41cz",
+                "mappings": []
+              }
+            ],
+            "reprompt": null,
+            "chips": null,
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "601e607f963169e8b6522d1a"
+              },
+              {
+                "type": "",
+                "target": "601e6091963169e8b6522d21",
+                "id": "601e607f963169e8b6522d1b"
+              },
+              {
+                "type": 2,
+                "target": "601e6106963169e8b6522d47",
+                "id": "601e60db963169e8b6522d45"
+              }
+            ]
+          }
+        },
+        "601e6091963169e8b6522d1f": {
+          "nodeID": "601e6091963169e8b6522d1f",
+          "type": "exit",
+          "data": {
+            "ports": []
+          }
+        },
+        "601e6091963169e8b6522d21": {
+          "nodeID": "601e6091963169e8b6522d21",
+          "type": "block",
+          "coords": [
+            2328.75,
+            495.4999999999999
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e609f963169e8b6522d29",
+              "601e6091963169e8b6522d1f"
+            ]
+          }
+        },
+        "601e609f963169e8b6522d29": {
+          "nodeID": "601e609f963169e8b6522d29",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "Goodbye!"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e6091963169e8b6522d1f",
+                "id": "601e609f963169e8b6522d2c"
+              }
+            ]
+          }
+        },
+        "601e6106963169e8b6522d47": {
+          "nodeID": "601e6106963169e8b6522d47",
+          "type": "flow",
+          "data": {
+            "diagramID": "601e5abc842c07001c485eaf",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "601e6106963169e8b6522d49"
+              }
+            ]
+          }
+        },
+        "601e6106963169e8b6522d4a": {
+          "nodeID": "601e6106963169e8b6522d4a",
+          "type": "block",
+          "coords": [
+            1662.5,
+            708
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e6106963169e8b6522d47"
+            ]
+          }
+        },
+        "601e621b963169e8b6522e30": {
+          "nodeID": "601e621b963169e8b6522e30",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "What date and time are good for you?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e6263963169e8b6522e3c",
+                "id": "601e621b963169e8b6522e32"
+              }
+            ]
+          }
+        },
+        "601e621b963169e8b6522e33": {
+          "nodeID": "601e621b963169e8b6522e33",
+          "type": "block",
+          "coords": [
+            1210,
+            -96.50000000000014
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e621b963169e8b6522e30",
+              "601e6263963169e8b6522e3c",
+              "601e64dcddf43a4a8471e1ce"
+            ]
+          }
+        },
+        "601e6263963169e8b6522e3c": {
+          "nodeID": "601e6263963169e8b6522e3c",
+          "type": "capture",
+          "data": {
+            "slot": "actions.type.Date",
+            "variable": "booking_date",
+            "reprompt": {
+              "voice": "Alexa",
+              "content": "Can you suggest a date you are available?"
+            },
+            "slotInputs": [],
+            "chips": [],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e64dcddf43a4a8471e1ce",
+                "id": "601e6263963169e8b6522e3f"
+              }
+            ]
+          }
+        },
+        "601e6289963169e8b6522e43": {
+          "nodeID": "601e6289963169e8b6522e43",
+          "type": "speak",
+          "data": {
+            "randomize": false,
+            "dialogs": [
+              {
+                "voice": "en-US-standard-C",
+                "content": "You are booked on {{[booking_date].booking_date}} at {{[booking_time].booking_time}} !"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e604d963169e8b6522d0e",
+                "id": "601e6289963169e8b6522e45"
+              }
+            ]
+          }
+        },
+        "601e6289963169e8b6522e46": {
+          "nodeID": "601e6289963169e8b6522e46",
+          "type": "block",
+          "coords": [
+            2035,
+            182.2499999999999
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "601e6289963169e8b6522e43"
+            ]
+          }
+        },
+        "601e64dcddf43a4a8471e1ce": {
+          "nodeID": "601e64dcddf43a4a8471e1ce",
+          "type": "capture",
+          "data": {
+            "slot": "actions.type.Time",
+            "variable": "booking_time",
+            "reprompt": {
+              "voice": "Alexa",
+              "content": "Can you suggest a time you are available?"
+            },
+            "slotInputs": [],
+            "chips": [],
+            "ports": [
+              {
+                "type": "",
+                "target": "601e6289963169e8b6522e46",
+                "id": "601e64dcddf43a4a8471e1d1"
+              }
+            ]
+          }
+        }
+      },
+      "versionID": "601e35e55374dd0006567130",
+      "creatorID": 55725,
+      "name": "book_appointment",
+      "modified": 1612607833
+    }
+  }
+}
